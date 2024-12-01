@@ -2,4 +2,13 @@
   <h1 class="text-4xl max-w-sm text-center font-bold text-zinc-700">
     {{ title }}
   </h1>
+  <div>
+    <button
+      class="h-12 w-48 text-shadow bg-purple-600 text-zinc-100"
+      routerLink="/login"
+      (click)="handleClick()"
+    >
+      Log In
+    </button>
+  </div>
 </main>
