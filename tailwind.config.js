@@ -6,6 +6,9 @@ module.exports = {
       fontSize: {
         "5xl": "42px",
       },
+      fontFamily: {
+        poppins: ['"Poppins"', "sans-serif"], // Add the Poppins font
+      },
       minHeight: {
         32: "7.75rem",
         80: "82dvh",
