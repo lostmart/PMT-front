@@ -1,14 +1,8 @@
 <main class="min-h-80 flex flex-col items-center justify-center">
-  <h1 class="text-4xl max-w-sm text-center font-bold text-zinc-700">
+  <h1 class="text-4xl m-28 max-w-sm text-center font-bold text-zinc-700">
     {{ title }}
   </h1>
   <div>
-    <button
-      class="h-12 w-48 text-shadow bg-purple-600 text-zinc-100"
-      routerLink="/login"
-      (click)="handleClick()"
-    >
-      Log In
-    </button>
+    <app-button routerLink="/login" btnText="hello world" />
   </div>
 </main>
