@@ -1,8 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { themeStyles } from '../../../../styles';
-
-const { background, text: textColor } = themeStyles.primary;
 
 @Component({
   selector: 'app-button',
@@ -12,12 +9,12 @@ const { background, text: textColor } = themeStyles.primary;
   styleUrl: './button.component.css',
 })
 export class ButtonComponent {
-  @Input() btnText: string = 'Default Text'; // Accepts btnText as an input, with a default value
+  @Input() btnText: string = 'Button here'; // Accepts btnText as an input, with a default value
+  @Input() background: string = 'bg-green-600';
+  @Input() text: string = 'text-zinc-100';
+  @Input() onclick: Function | null = null;
 
   handleBtnClick() {
     console.log('running the click ...');
   }
-
-  background = background;
-  text = textColor;
 }

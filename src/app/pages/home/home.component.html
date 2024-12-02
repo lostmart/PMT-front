@@ -3,6 +3,12 @@
     {{ title }}
   </h1>
   <div>
-    <app-button routerLink="/login" btnText="hello world" />
+    <app-button
+      routerLink="/login"
+      btnText="Log In"
+      background="{{ theme.background }}"
+      text="{{ theme.text }}"
+      (click)="handleClick()"
+    />
   </div>
 </main>
