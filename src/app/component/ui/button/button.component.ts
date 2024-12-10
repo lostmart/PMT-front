@@ -13,6 +13,7 @@ export class ButtonComponent {
   @Input() background: string = 'bg-green-600';
   @Input() text: string = 'text-zinc-100';
   @Input() onclick: Function | null = null;
+  @Input() type: string | null = 'button';
 
   handleBtnClick() {
     console.log('running the click ...');
