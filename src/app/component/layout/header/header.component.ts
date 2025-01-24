@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
-  title = 'Project Management Tool';
+  title = 'PMT';
 }
