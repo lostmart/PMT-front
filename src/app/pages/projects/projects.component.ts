@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Project } from '../../../types/Project';
 import { NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { ProjectService } from '../../service/project.service';
 
 @Component({
   selector: 'app-projects',
@@ -11,6 +12,10 @@ import { RouterLink } from '@angular/router';
   styleUrl: './projects.component.css',
 })
 export class ProjectsComponent {
+  housingService: ProjectService = inject(ProjectService);
+
   projectsList: Project[] = [];
-  constructor() {}
+  constructor() {
+    this.projectsList = this.housingService.getAllProjects();
+  }
 }

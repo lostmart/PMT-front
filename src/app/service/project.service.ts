@@ -10,11 +10,11 @@ export class ProjectService {
 
   constructor() {}
 
-  getAllApartments(): Project[] {
+  getAllProjects(): Project[] {
     return this.projectList;
   }
 
-  getApartmentById(id: string): Project | undefined {
+  getProjectById(id: string): Project | undefined {
     return this.projectList.find((project) => project?.id === parseInt(id, 10));
   }
 }
