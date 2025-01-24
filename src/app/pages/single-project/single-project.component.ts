@@ -13,9 +13,9 @@ import { ActivatedRoute } from '@angular/router';
 export class SingleProjectComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
   housingService: ProjectService = inject(ProjectService);
-  foundService: Project | null | undefined = null;
+  foundProject: Project | null | undefined = null;
   constructor() {
     const id: string | null = this.route.snapshot.paramMap.get('id');
-    this.foundService = this.housingService.getProjectById(id ? id : '');
+    this.foundProject = this.housingService.getProjectById(id ? id : '');
   }
 }
