@@ -3,11 +3,14 @@
     <article class="flex flex-col items-center mt-2">
         <h2><span class="font-medium">Name:</span> {{ foundProject?.name }}</h2>
         <p><span class="font-medium">Description:</span> {{ foundProject?.description }}</p>
-        <div *ngIf="foundProject?.tasks?.length">
+        <div *ngIf="tasksList.length">
             <h3 class="font-medium">Tasks:</h3>
             <ul class="mt-2">
                 <li *ngFor="let item of tasksList">
-                    {{ item }}
+                    <a routerLink="/task/{{ item }}" class="p-2 m-2">
+                        {{ item }}
+
+                    </a>
                 </li>
             </ul>
         </div>

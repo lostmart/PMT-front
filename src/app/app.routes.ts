@@ -3,6 +3,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LogInComponent } from './pages/log-in/log-in.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { SingleProjectComponent } from './pages/single-project/single-project.component';
+import { TaskComponent } from './pages/task/task.component';
 
 export const routes: Routes = [
   {
@@ -20,6 +21,10 @@ export const routes: Routes = [
   {
     path: 'project/:id',
     component: SingleProjectComponent,
+  },
+  {
+    path: 'task/:id',
+    component: TaskComponent,
   },
   {
     path: '**',
