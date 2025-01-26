@@ -1,8 +1,16 @@
 <section class="p-4">
     <h1 class="text-center text-2xl mt-2">Project details</h1>
     <article class="flex flex-col items-center mt-2">
-        <h2>{{ foundProject?.name }}</h2>
-        <p>{{ foundProject?.description }}</p>
+        <h2><span class="font-medium">Name:</span> {{ foundProject?.name }}</h2>
+        <p><span class="font-medium">Description:</span> {{ foundProject?.description }}</p>
+        <div *ngIf="foundProject?.tasks?.length">
+            <h3 class="font-medium">Tasks:</h3>
+            <ul class="mt-2">
+                <li *ngFor="let item of tasksList">
+                    {{ item }}
+                </li>
+            </ul>
+        </div>
     </article>
     <app-button routerLink="/projects" btnText="Back Projects" background="{{ theme.background }}"
         text="{{ theme.text }}" />

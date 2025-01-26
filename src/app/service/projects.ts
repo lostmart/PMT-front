@@ -13,7 +13,8 @@ export const projectsListData = [
     description: 'Description 2',
     startDate: '2021-02-01',
     owner: 2,
-    tasks: [4, 5, 6],
+    tasks: [],
+    members: [1, 2, 3],
   },
   {
     id: 3,
