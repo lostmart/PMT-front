@@ -1,3 +1,5 @@
+import { TaskHistory } from "./TaskHistory";
+
 export type Task = {
   id: number | string;
   name: string;
@@ -7,4 +9,5 @@ export type Task = {
   members: number[] | string[];
   priority: 'low' | 'medium' | 'high';
   status: 'To Do' | 'In Progress' | 'Completed';
+  history: TaskHistory[];
 };

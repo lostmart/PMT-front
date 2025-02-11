@@ -10,5 +10,6 @@ export const tasksListData: Task[] = [
     members: [1, 2],
     priority: 'low',
     status: 'To Do',
+    history: [],
   },
 ];

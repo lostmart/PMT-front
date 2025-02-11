@@ -1,4 +1,4 @@
-type Roles = 'admin' | 'collaborator' | 'guest';
+import { Task } from './Task';
 
 export type User = {
   id: number | string;
@@ -6,6 +6,6 @@ export type User = {
   userName: string;
   firstName: string;
   lastName: string;
-  role: Roles;
-  assignedTasks: number[] | string[];
+  role: 'admin' | 'collaborator' | 'guest';
+  assignedTasks: Task[] | Task['id'][];
 };
