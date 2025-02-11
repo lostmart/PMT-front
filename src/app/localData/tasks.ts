@@ -1,4 +1,6 @@
-export const tasksListData = [
+import { Task } from '../../types/Task';
+
+export const tasksListData: Task[] = [
   {
     id: 1,
     name: 'Task 1',
@@ -7,5 +9,6 @@ export const tasksListData = [
     dueDate: '2021-01-10',
     members: [1, 2],
     priority: 'low',
+    status: 'To Do',
   },
 ];

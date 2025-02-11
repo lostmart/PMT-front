@@ -5,5 +5,6 @@ export type Task = {
   startDate: string;
   dueDate: string;
   members: number[] | string[];
-  priority: string;
+  priority: 'low' | 'medium' | 'high';
+  status: 'To Do' | 'In Progress' | 'Completed';
 };

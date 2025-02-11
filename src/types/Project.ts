@@ -3,7 +3,7 @@ export type Project = {
   name: string;
   description: string;
   startDate: string;
-  owner: number;
+  owner: number | string;
   tasks: number[] | string[];
   members?: number[];
 };

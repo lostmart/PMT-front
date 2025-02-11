@@ -7,5 +7,5 @@ export type User = {
   firstName: string;
   lastName: string;
   role: Roles;
-  tasks: number[] | string[];
+  assignedTasks: number[] | string[];
 };
