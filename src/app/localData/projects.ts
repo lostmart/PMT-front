@@ -8,6 +8,7 @@ export const projectsListData: Project[] = [
     startDate: '2021-01-01',
     owner: 1,
     tasks: [1, 2, 3],
+    progress: 0,
   },
   {
     id: 2,
@@ -17,6 +18,7 @@ export const projectsListData: Project[] = [
     owner: 2,
     tasks: [],
     members: [1, 2, 3],
+    progress: 50,
   },
   {
     id: 3,
@@ -25,5 +27,6 @@ export const projectsListData: Project[] = [
     startDate: '2021-03-01',
     owner: 3,
     tasks: [7, 8, 9],
+    progress: 100,
   },
 ];
