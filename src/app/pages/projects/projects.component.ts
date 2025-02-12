@@ -3,11 +3,12 @@ import { Project } from '../../../types/Project';
 import { NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ProjectService } from '../../service/project.service';
+import { DropdownComponent } from '../../component/ui/dropdown/dropdown.component';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [NgFor, RouterLink],
+  imports: [NgFor, RouterLink, DropdownComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css',
 })
@@ -17,5 +18,9 @@ export class ProjectsComponent {
   projectsList: Project[] = [];
   constructor() {
     this.projectsList = this.housingService.getAllProjects();
+  }
+
+  handleDropdownAction(action: string) {
+    console.log(`Selected action: ${action}`);
   }
 }
