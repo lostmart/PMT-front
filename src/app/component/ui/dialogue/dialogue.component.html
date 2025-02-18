@@ -1,0 +1,19 @@
+<div class="dialogue-container">
+    <div class="dialogue-content" role="presentation" tabindex="-1">
+        <div class="dialogue-paper" role="dialog" aria-describedby="alert-dialog-description"
+            aria-labelledby="alert-dialog-title" aria-modal="true">
+            <h2>This is some random title</h2>
+            <div class="dialogue-text">
+
+                <p>dialogue works!</p>
+            </div>
+            <div class="dialogue-actions">
+                <app-button routerLink="/login" btnText="Log In" background="{{ neutralTheme.background }}"
+                    text="{{ neutralTheme.text }}" (click)="handleClick()" />
+                <app-button routerLink="/login" btnText="Log In" background="{{ secondaryTheme.background }}"
+                    text="{{ secondaryTheme.text }}" (click)="handleClick()" />
+            </div>
+
+        </div>
+    </div>
+</div>
