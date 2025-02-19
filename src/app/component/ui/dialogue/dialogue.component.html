@@ -2,16 +2,16 @@
     <div class="dialogue-content" role="presentation" tabindex="-1">
         <div class="dialogue-paper" role="dialog" aria-describedby="alert-dialog-description"
             aria-labelledby="alert-dialog-title" aria-modal="true">
-            <h2>This is some random title</h2>
-            <div class="dialogue-text">
+            <h2 class="p-4">This is some random title</h2>
+            <div class="dialogue-text px-4">
 
                 <p>dialogue works!</p>
             </div>
-            <div class="dialogue-actions">
+            <div class="dialogue-actions flex justify-between p-4 gap-4">
                 <app-button routerLink="/login" btnText="Log In" background="{{ neutralTheme.background }}"
-                    text="{{ neutralTheme.text }}" (click)="handleClick()" />
+                    text="{{ neutralTheme.text }}" (click)="handleClick()" size="small" />
                 <app-button routerLink="/login" btnText="Log In" background="{{ secondaryTheme.background }}"
-                    text="{{ secondaryTheme.text }}" (click)="handleClick()" />
+                    text="{{ secondaryTheme.text }}" (click)="handleClick()" size="small" />
             </div>
 
         </div>
