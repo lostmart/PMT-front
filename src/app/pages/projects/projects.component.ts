@@ -18,14 +18,18 @@ export class ProjectsComponent {
 
   projectsList: Project[] = [];
   showDialogue: boolean | string = false;
-  
+
   constructor() {
     this.projectsList = this.housingService.getAllProjects();
   }
 
+  handleDropdownClick(action: MouseEvent) {
+    console.log('Dropdown clicked', action);
+  }
+
   handleDropdownAction(action: string) {
     console.log(`Selected action: ${action}`);
-    if(action === 'delete') {
+    if (action === 'delete') {
       console.log('Deleting project');
     }
   }
