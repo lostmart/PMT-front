@@ -15,13 +15,9 @@ export class DialogueComponent {
   neutralTheme = themeStyles.neutral;
   secondaryTheme = themeStyles.secondary;
 
-  showDialogue = true;
+  showDialogue = false;
 
-  setShowhandleDialogue() {
+  setShowDialogue() {
     this.showDialogue = !this.showDialogue;
   }
-
-  // handleClick() {
-  //   console.log('running the click ...');
-  // }
 }

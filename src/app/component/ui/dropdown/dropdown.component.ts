@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { NgFor } from '@angular/common'; // ✅ Import NgFor explicitly
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-dropdown',
@@ -9,6 +9,7 @@ import { NgFor } from '@angular/common'; // ✅ Import NgFor explicitly
   styleUrls: ['./dropdown.component.scss'],
 })
 export class DropdownComponent {
+  @Output() closeDropdown = new EventEmitter
   @Output() actionSelected = new EventEmitter<string>();
 
   menuItems = [
