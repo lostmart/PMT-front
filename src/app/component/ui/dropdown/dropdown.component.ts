@@ -1,16 +1,18 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-dropdown',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, NgIf],
   templateUrl: './dropdown.component.html',
   styleUrls: ['./dropdown.component.scss'],
 })
 export class DropdownComponent {
-  @Output() closeDropdown = new EventEmitter
+  @Output() closeDropdown = new EventEmitter();
   @Output() actionSelected = new EventEmitter<string>();
+
+  showDropdown = false;
 
   menuItems = [
     { label: 'View', icon: 'eye', action: 'view' },

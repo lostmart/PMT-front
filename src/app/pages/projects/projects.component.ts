@@ -17,11 +17,16 @@ export class ProjectsComponent {
   housingService: ProjectService = inject(ProjectService);
 
   projectsList: Project[] = [];
+  showDialogue: boolean | string = false;
+  
   constructor() {
     this.projectsList = this.housingService.getAllProjects();
   }
 
   handleDropdownAction(action: string) {
     console.log(`Selected action: ${action}`);
+    if(action === 'delete') {
+      console.log('Deleting project');
+    }
   }
 }

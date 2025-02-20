@@ -7,18 +7,23 @@
       
       >
     </a> -->
-      <article 
-      *ngFor="let project of projectsList" class="flex flex-col items-center p-4 bg-slate-100 mt-2 relative">
-        <h2 class="flex items-center justify-between w-full text-lg">
-          {{ project.name }}
-          <button>
-            <img src="../../../assets/icons/dots.svg" alt="" />
-          </button>
-        </h2>
-        <app-dropdown (actionSelected)="handleDropdownAction($event)"></app-dropdown>
+    <article
+      *ngFor="let project of projectsList"
+      class="flex flex-col items-center p-4 bg-slate-100 mt-2 relative"
+    >
+      <h2 class="flex items-center justify-between w-full text-lg">
+        {{ project.name }}
+        <button>
+          <img src="../../../assets/icons/dots.svg" alt="dots button" />
+        </button>
+      </h2>
+      <app-dropdown
+        (actionSelected)="handleDropdownAction($event)"
+      ></app-dropdown>
 
-        <p>{{ project.description }}</p>
-      </article>
+      <p>{{ project.description }}</p>
+    </article>
   </div>
 </section>
-<app-dialogue></app-dialogue>
+
+<app-dialogue showDialogue="{{ showDialogue }}" />

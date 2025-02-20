@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
 import { themeStyles } from '../../../../styles';
 import { NgIf } from '@angular/common';
@@ -15,7 +15,7 @@ export class DialogueComponent {
   neutralTheme = themeStyles.neutral;
   secondaryTheme = themeStyles.secondary;
 
-  showDialogue = false;
+  @Input() showDialogue: boolean | null | string = false;
 
   setShowDialogue() {
     this.showDialogue = !this.showDialogue;
