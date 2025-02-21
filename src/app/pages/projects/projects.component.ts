@@ -24,7 +24,8 @@ export class ProjectsComponent {
     this.projectsList = this.housingService.getAllProjects();
   }
 
-  handleDropdownClick(id: string | number) {
+  handleDropdownClick(event: MouseEvent, id: string | number) {
+    event.stopPropagation();
     console.log('Dropdown clicked', id);
     this.selectedId = id;
   }
