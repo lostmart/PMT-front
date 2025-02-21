@@ -8,15 +8,15 @@
     <article *ngFor="let project of projectsList" class="flex flex-col items-center p-4 bg-slate-100 mt-2 relative">
       <h2 class="flex items-center justify-between w-full text-lg">
         {{ project.name }}
-        <button class="p-2 bg-slate-100" data-id="{{project.id}}" (click)="isDropdownVisible = !isDropdownVisible">
+        <button class="p-2 bg-slate-100" data-id="{{project.id}}" (click)="handleDropdownClick(project.id)">
           <img src="../../../assets/icons/dots.svg" alt="dots button" class="w-[5px]" />
         </button>
       </h2>
-      <app-dropdown (actionSelected)="handleDropdownAction($event)"></app-dropdown>
+      <app-dropdown *ngIf="project.id === selectedId" (actionSelected)="handleDropdownAction($event)"></app-dropdown>
 
       <p>{{ project.description }}</p>
     </article>
   </div>
 </section>
 
-<app-dialogue [changeDialogueState]="changeDialogueState" />
+<app-dialogue />

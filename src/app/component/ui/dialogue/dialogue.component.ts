@@ -18,7 +18,7 @@ export class DialogueComponent {
   showDialogue: boolean | null = false;
 
   @Input() changeDialogueState() {
-    this.setShowDialogue();
+    this.showDialogue = !this.showDialogue;
   }
 
   setShowDialogue() {
