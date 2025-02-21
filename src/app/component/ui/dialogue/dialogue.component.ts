@@ -15,7 +15,11 @@ export class DialogueComponent {
   neutralTheme = themeStyles.neutral;
   secondaryTheme = themeStyles.secondary;
 
-  @Input() showDialogue: boolean | null | string = false;
+  showDialogue: boolean | null = false;
+
+  @Input() changeDialogueState() {
+    this.setShowDialogue();
+  }
 
   setShowDialogue() {
     this.showDialogue = !this.showDialogue;

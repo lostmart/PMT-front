@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
 
 @Component({
@@ -9,10 +9,10 @@ import { NgFor, NgIf } from '@angular/common';
   styleUrls: ['./dropdown.component.scss'],
 })
 export class DropdownComponent {
+  @Input() isVisible = false;
+
   @Output() closeDropdown = new EventEmitter();
   @Output() actionSelected = new EventEmitter<string>();
-
-  showDropdown = false;
 
   menuItems = [
     { label: 'View', icon: 'eye', action: 'view' },

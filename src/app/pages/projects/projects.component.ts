@@ -17,15 +17,23 @@ export class ProjectsComponent {
   housingService: ProjectService = inject(ProjectService);
 
   projectsList: Project[] = [];
-  showDialogue: boolean | string = false;
+  showDialogue: boolean | null = false;
 
   constructor() {
     this.projectsList = this.housingService.getAllProjects();
   }
 
-  handleDropdownClick(action: MouseEvent) {
-    console.log('Dropdown clicked', action);
+  handleDropdownClick() {
+    this.setShowDropdown();
   }
+
+  isDropdownVisible = false;
+
+  setShowDropdown() {
+    console.log('running the setShowDropdown function');
+  }
+
+  changeDialogueState() {}
 
   handleDropdownAction(action: string) {
     console.log(`Selected action: ${action}`);
