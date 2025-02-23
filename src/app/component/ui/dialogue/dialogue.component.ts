@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
 import { themeStyles } from '../../../../styles';
 import { NgIf } from '@angular/common';
@@ -15,13 +15,10 @@ export class DialogueComponent {
   neutralTheme = themeStyles.neutral;
   secondaryTheme = themeStyles.secondary;
 
-  showDialogue: boolean | null = false;
+  @Input() showDialogue: boolean | null = false;
+  @Output() toggleDialogue = new EventEmitter();
 
-  @Input() changeDialogueState() {
-    this.showDialogue = !this.showDialogue;
-  }
-
-  setShowDialogue() {
-    this.showDialogue = !this.showDialogue;
+  onClickBtn() {
+    this.toggleDialogue.emit();
   }
 }

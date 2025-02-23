@@ -6,7 +6,6 @@ import { ProjectService } from '../../service/project.service';
 import { DropdownComponent } from '../../component/ui/dropdown/dropdown.component';
 import { DialogueComponent } from '../../component/ui/dialogue/dialogue.component';
 
-type TDropDown = 'edit' | 'delete' | 'view';
 @Component({
   selector: 'app-projects',
   standalone: true,
@@ -35,11 +34,16 @@ export class ProjectsComponent {
     this.selectedId = id;
   }
 
-  // actions
-  handleDropdownAction(action: TDropDown) {
+  // actions for dropdown
+  handleDropdownAction(action: 'edit' | 'delete' | 'view') {
     console.log(`Selected action: ${action}`);
+    this.setShowDialogue();
     if (action === 'delete') {
       console.log('Deleting project');
     }
+  }
+
+  setShowDialogue() {
+    this.showDialogue = !this.showDialogue;
   }
 }

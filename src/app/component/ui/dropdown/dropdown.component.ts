@@ -12,7 +12,7 @@ export class DropdownComponent {
   @Input() isDropDownOpen = false;
 
   @Output() closeDropdown = new EventEmitter();
-  @Output() actionSelected = new EventEmitter<string>();
+  @Output() actionSelected = new EventEmitter<'edit' | 'delete' | 'view'>();
 
   menuItems = [
     { label: 'View', icon: 'eye', action: 'view' },
@@ -21,6 +21,6 @@ export class DropdownComponent {
   ];
 
   onItemClick(action: string) {
-    this.actionSelected.emit(action);
+    this.actionSelected.emit(action as 'edit' | 'delete' | 'view');
   }
 }
