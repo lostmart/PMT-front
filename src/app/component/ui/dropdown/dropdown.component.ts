@@ -1,15 +1,15 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { NgFor, NgIf } from '@angular/common';
+import { NgClass, NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-dropdown',
   standalone: true,
-  imports: [NgFor, NgIf],
+  imports: [NgFor, NgClass],
   templateUrl: './dropdown.component.html',
   styleUrls: ['./dropdown.component.scss'],
 })
 export class DropdownComponent {
-  @Input() isVisible = false;
+  @Input() isDropDownOpen = false;
 
   @Output() closeDropdown = new EventEmitter();
   @Output() actionSelected = new EventEmitter<string>();

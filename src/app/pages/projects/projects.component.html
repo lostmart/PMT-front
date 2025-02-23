@@ -12,7 +12,8 @@
           <img src="../../../assets/icons/dots.svg" alt="dots button" class="w-[5px]" />
         </button>
       </h2>
-      <app-dropdown *ngIf="project.id === selectedId" (actionSelected)="handleDropdownAction($event)"></app-dropdown>
+      <app-dropdown *ngIf="project.id === selectedId" [isDropDownOpen]="isDropDownOpen(project.id)"
+        (actionSelected)="handleDropdownAction($event)"></app-dropdown>
 
       <p>{{ project.description }}</p>
     </article>
