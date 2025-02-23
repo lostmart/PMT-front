@@ -1,0 +1,14 @@
+.grow-animate {
+    animation: growNow 0.35s ease-in-out;
+    
+}
+
+@keyframes growNow {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 136px;
+    }
+}
