@@ -13,11 +13,11 @@
         </button>
       </h2>
       <app-dropdown *ngIf="project.id === selectedId" [isDropDownOpen]="isDropDownOpen(project.id)"
-        (actionSelected)="handleDropdownAction($event)"></app-dropdown>
+        (actionSelected)="handleDropdownAction($event, project.id)"></app-dropdown>
 
       <p>{{ project.description }}</p>
     </article>
   </div>
 </section>
 
-<app-dialogue [showDialogue]="showDialogue" (toggleDialogue)="setShowDialogue()" />
+<app-dialogue [showDialogue]="showDialogue" />

@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { Project } from '../../../types/Project';
 import { NgFor, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -20,7 +21,7 @@ export class ProjectsComponent {
   showDialogue: boolean | null = false;
   selectedId: string | number | null = null;
 
-  constructor() {
+  constructor(private router: Router) {
     this.projectsList = this.housingService.getAllProjects();
   }
 
@@ -35,15 +36,24 @@ export class ProjectsComponent {
   }
 
   // actions for dropdown
-  handleDropdownAction(action: 'edit' | 'delete' | 'view') {
+  handleDropdownAction(
+    action: 'edit' | 'delete' | 'view',
+    id: string | number
+  ) {
+    console.log(`Selected project id: ${id}`);
     console.log(`Selected action: ${action}`);
-    this.setShowDialogue();
+    this.setShowDialogue(action, id);
     if (action === 'delete') {
       console.log('Deleting project');
     }
   }
 
-  setShowDialogue() {
+  setShowDialogue(action: 'edit' | 'delete' | 'view', id: string | number) {
     this.showDialogue = !this.showDialogue;
+    this.goToProject(id);
+  }
+
+  goToProject(id: string | number) {
+    this.router.navigate(['/project', id]);
   }
 }
