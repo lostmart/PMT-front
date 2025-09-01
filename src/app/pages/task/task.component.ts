@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { themeStyles } from '../../../styles';
-import { ButtonComponent } from '../../component/ui/button/button.component';
+import { themeStyles } from '@shared/components/theme/styles';
+import { ButtonComponent } from '@shared/components/ui';
 import { TaskService } from '../../core/services/task.service';
 import { Task } from '@models';
 

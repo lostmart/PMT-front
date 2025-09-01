@@ -2,10 +2,9 @@ import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Project } from '@models';
 import { NgFor, NgIf } from '@angular/common';
-import { RouterLink } from '@angular/router';
-import { ProjectService } from '../../core/services/project.service';
-import { DropdownComponent } from '../../component/ui/dropdown/dropdown.component';
-import { DialogueComponent } from '../../component/ui/dialogue/dialogue.component';
+import { ProjectService } from '@services';
+import { DropdownComponent } from '@shared/components/ui';
+import { DialogueComponent } from '@shared/components/ui';
 
 @Component({
   selector: 'app-projects',

@@ -2,10 +2,11 @@ import { Component, inject } from '@angular/core';
 import { ProjectService } from '../../core/services/project.service';
 import { Project } from '@models';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { themeStyles } from '../../../styles';
-import { ButtonComponent } from '../../component/ui/button/button.component';
+import { themeStyles } from '@shared/components/theme/styles';
+
+import { ButtonComponent } from '@shared/components/ui';
 import { NgFor, NgIf } from '@angular/common';
-import { ProgressBarComponent } from '../../component/ui/progress-bar/progress-bar.component';
+import { ProgressBarComponent } from '@shared/components/ui';
 
 @Component({
   selector: 'app-single-project',
@@ -15,6 +16,9 @@ import { ProgressBarComponent } from '../../component/ui/progress-bar/progress-b
   styleUrl: './single-project.component.css',
 })
 export class SingleProjectComponent {
+  // for <app-button [variant]="variant">
+  variant: 'primary' | 'secondary' | 'third' | 'danger' | 'neutral' = 'neutral';
+
   route: ActivatedRoute = inject(ActivatedRoute);
   housingService: ProjectService = inject(ProjectService);
   foundProject: Project | null | undefined = null;

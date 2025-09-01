@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ButtonComponent } from '../../component/ui/button/button.component';
-import { themeStyles } from '../../../styles';
+import { ButtonComponent } from '@shared/components/ui';
+import { themeStyles } from '@shared/components/theme/styles';
 
 // const { background, text: textColor } = themeStyles.primary;
 

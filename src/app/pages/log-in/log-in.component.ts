@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { ButtonComponent } from '../../component/ui/button/button.component';
+import { ButtonComponent } from '@shared/components/ui';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
