@@ -1,4 +1,13 @@
-import { TaskHistory } from '@models';
+import { TaskHistory, User } from '@models';
+
+export type TaskStatus = 'To Do' | 'In Progress' | 'Completed';
+
+export type TaskPriority = 'low' | 'medium' | 'high';
+
+export type TaskMember = {
+  id: User['id'];
+  userName: User['userName'];
+};
 
 export type Task = {
   id: number | string;
@@ -6,8 +15,8 @@ export type Task = {
   description: string;
   startDate: string;
   dueDate: string;
-  members: number[] | string[];
-  priority: 'low' | 'medium' | 'high';
-  status: 'To Do' | 'In Progress' | 'Completed';
-  history: TaskHistory[];
+  members: TaskMember[] | number[];
+  priority: TaskPriority;
+  status: TaskStatus;
+  history?: TaskHistory[];
 };
