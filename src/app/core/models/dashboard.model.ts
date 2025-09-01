@@ -1,5 +1,5 @@
-import { Project } from './Project';
-import { Task } from './Task';
+import { Project } from "./project.model";
+import { Task } from "./task.model";
 
 export type Dashboard = {
   projects: Project[];

@@ -1,4 +1,4 @@
-import { TaskHistory } from "./TaskHistory";
+import { TaskHistory } from './task-history.model';
 
 export type Task = {
   id: number | string;
