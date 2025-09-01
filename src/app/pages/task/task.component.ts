@@ -2,8 +2,8 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { themeStyles } from '../../../styles';
 import { ButtonComponent } from '../../component/ui/button/button.component';
-import { TaskService } from '../../service/task.service';
-import { Task } from '../../../types/Task';
+import { TaskService } from '../../core/services/task.service';
+import { Task } from '@models';
 
 @Component({
   selector: 'app-task',

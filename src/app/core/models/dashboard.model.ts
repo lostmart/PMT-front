@@ -1,5 +1,4 @@
-import { Project } from "./project.model";
-import { Task } from "./task.model";
+import { Project, Task } from '@models';
 
 export type Dashboard = {
   projects: Project[];

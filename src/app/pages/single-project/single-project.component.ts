@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { ProjectService } from '../../service/project.service';
-import { Project } from '../../../types/Project';
+import { ProjectService } from '../../core/services/project.service';
+import { Project } from '@models';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { themeStyles } from '../../../styles';
 import { ButtonComponent } from '../../component/ui/button/button.component';

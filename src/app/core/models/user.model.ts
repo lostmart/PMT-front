@@ -1,4 +1,4 @@
-import { Task } from './task.model';
+import { Task } from '@models';
 
 export type User = {
   id: number | string;

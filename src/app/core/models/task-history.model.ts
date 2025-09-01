@@ -1,4 +1,4 @@
-import { User } from './user.model';
+import { User } from '@models';
 
 export type TaskHistory = {
   id: string | number;

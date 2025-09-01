@@ -1,4 +1,4 @@
-import { Task } from '../../types/Task';
+import { Task } from '@models';
 
 export const tasksListData: Task[] = [
   {

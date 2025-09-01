@@ -1,16 +1,16 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { Project } from '../../../types/Project';
+import { Project } from '@models';
 import { NgFor, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { ProjectService } from '../../service/project.service';
+import { ProjectService } from '../../core/services/project.service';
 import { DropdownComponent } from '../../component/ui/dropdown/dropdown.component';
 import { DialogueComponent } from '../../component/ui/dialogue/dialogue.component';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [NgFor, RouterLink, DropdownComponent, DialogueComponent, NgIf],
+  imports: [NgFor, DropdownComponent, DialogueComponent, NgIf],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css',
 })
