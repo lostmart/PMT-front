@@ -3,12 +3,18 @@
     {{ title }}
   </h1>
   <div>
-    <app-button
-      routerLink="/login"
-      btnText="Log In"
-      background="{{ theme.background }}"
-      text="{{ theme.text }}"
-      (click)="handleClick()"
-    />
+    <app-button routerLink="/login" btnText="Log In" background="{{ theme.background }}" text="{{ theme.text }}"
+      (click)="handleClick()" />
   </div>
+  <section class="status-container">
+    @if (backendStatus === 'checking') {
+    <div class="status checking">Checking backend status...</div>
+    }
+    @if (backendStatus === 'online') {
+    <div class="status online">✅ Backend is online.</div>
+    }
+    @if (backendStatus === 'offline') {
+    <div class="status offline">❌ Backend is not reachable.</div>
+    }
+  </section>
 </main>

@@ -24,8 +24,12 @@ export class HomeComponent {
 
   ngOnInit() {
     this.api.pingBackend().subscribe({
-      next: (response: any) => console.log(response),
-      error: (error: any) => console.error(error),
+      next: () => {
+        this.backendStatus = 'online';
+      },
+      error: () => {
+        this.backendStatus = 'offline';
+      },
       complete: () => console.log('API call completed'),
     });
   }
