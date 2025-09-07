@@ -7,14 +7,14 @@ import { delay, Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ApiServiceTsService {
-  private apiUrl = environment.apiUrl;
+  private apiUrl = environment.apiUrl + '/api/health';
 
   constructor(private http: HttpClient) {}
 
   // // Simple test call to backend
-  // pingBackend(): Observable<any> {
-  //   return this.http
-  //     .get(`${this.apiUrl}`, { responseType: 'text' })
-  //     .pipe(delay(600));
-  // }
+  pingBackend(): Observable<any> {
+    return this.http
+      .get(`${this.apiUrl}`, { responseType: 'json' })
+      .pipe(delay(100));
+  }
 }
